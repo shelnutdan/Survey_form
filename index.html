@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Survey Form</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <header></header>
+  <nav></nav>
+  <main>
+
+    <div class='container'>
+
+      <div id="title">Survey Form</div>
+      <div id="description">Description of Survey form will go here</div>
+      <form id='Survey-Form'>
+        <fieldset>
+         <div id='name'>
+           <legend>Name:</legend><input type='text' value="Name">
+         </div>
+         <div id='email'>
+           <legend>Email:</legend><input type='text' value="Email">
+         </div>
+         <div id='number'>
+           <legend>Age:</legend><input type='number' value="age">
+         </div>
+
+         <div id='dropdown'>
+           <select id='car-dropdown'name="cars">
+             <option value="volvo">Volvo</option>
+             <option value="saab">Saab</option>
+             <option value="fiat">Fiat</option>
+             <option value="audi">Audi</option>
+           </select>
+         </div>
+         <div id="car-condition">
+          <div id="condition-description">
+            What conditon was your car dought in?
+          </div>
+          <div id='conditon-labels'>
+            <input type="radio" name="condition" value="New">New<br>
+            <input type="radio" name="condition" value="Used">Used<br>
+            <input type="radio" name="condition" value="Pre-Owned">Pre-Owned
+          </div>
+         </div>
+         <div id='car-year-dropdown'>
+           <select id='year-dropdown'name="cars">
+             <option value="2019">2019</option>
+             <option value="2018">2018</option>
+             <option value="2017">2017</option>
+             <option value="2016">2016</option>
+             <option value="2015">2015</option>
+             <option value="2014">2014</option>
+             <option value="2013">2013</option>
+             <option value="2012">2012</option>
+           </select>
+         </div>
+         <div class='left-panel'>
+           <div class='Work-done-sections'>
+             Has there been any work done on you car for any of the follow reasons:
+           </div>
+           <div class='right-panel'>
+            <input type="checkbox" name="work1" value="Bike">Car accident<br>
+            <input type="checkbox" name="work2" value="Car">Broken window<br>
+            <input type="checkbox" name="work3" value="Boat">Attempted robbery<br>
+            <input type="checkbox" name="work4" value="Boat">No work done<br>
+            <input type="checkbox" name="work5" value="Boat">Other<br>
+           </div>
+         </div>
+         <div class='left-panel'>
+           <div class='comment-labels'>
+             <label for='comments'>Enter any additional comments about your cars conditon</label>
+           </div>
+           <div class='comment-section'>
+            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+           </div>
+         </div>
+         <div >
+          <input id='submit' type="submit" value="Submit">
+         </div>
+       </fieldset>
+      </form>
+    </div>
+    <footer></footer>
+  </main>
+</body>
+</html>
