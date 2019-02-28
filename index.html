@@ -5,86 +5,132 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Survey Form</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
 </head>
 <body>
-  <header></header>
-  <nav></nav>
   <main>
-
+    <div class='container-fluid'>
+      <div id="title"><h1>Survey Form</h1></div>
+      <div id="description"><p>Let us know about the car you bought</p></div>
+    </div>
     <div class='container'>
 
-      <div id="title">Survey Form</div>
-      <div id="description">Description of Survey form will go here</div>
       <form id='Survey-Form'>
         <fieldset>
-         <div id='name'>
-           <legend>Name:</legend><input type='text' value="Name">
+          <div id='name'>
+            <div class='left-panel'>
+               <label id='name-label' for='name'>Name:</label>
+            </div>
+            <div class='right-panel'>
+             <input type='text' value="Name" class="input-field" required >
+           </div>
          </div>
          <div id='email'>
-           <legend>Email:</legend><input type='email' minlength='3' pattern=".+@gmail.com" value="youremail@gmail.com">
+           <div class='left-panel'>
+             <label id='email-label' for ='email'>Email:</label>
+           </div>
+           <div class='right-panel'>
+             <input type='email' minlength='3' pattern=".+@gmail.com" value="youremail@gmail.com" class="input-field" required >
+           </div>
          </div>
          <div id='number'>
-           <legend>Age:</legend><input type='number' min ='16' max='120' value="age">
+           <div class='left-panel'>
+             <label id='age-label' for="age">Age:</label>
+          </div>
+           <div class='right-panel'>
+             <input type='number' name='age' min ='16' max='120' placeholder="16" class="input-field" required >
+           </div>
          </div>
-
          <div id='dropdown'>
-           <select id='car-dropdown'name="cars">
-             <option value="volvo">Volvo</option>
-             <option value="saab">Saab</option>
-             <option value="fiat">Fiat</option>
-             <option value="audi">Audi</option>
-           </select>
+           <div class='left-panel'>
+             <label id='car-dropdown-label'for="dropdown">What brand of car did you buy?</label>
+           </div>
+           <div class='right-panel'>
+             <select id='car-dropdown'name="cars">
+               <option value="audi">Audi</option>
+               <option value="Buick">Buick</option>
+               <option value="Chevrolet">Chevrolet</option>
+               <option value="Dodge">Dodge</option>
+               <option value="Ford">Ford</option>
+               <option value="GMC">GMC</option>
+               <option value="Honda">Honda</option>
+               <option value="Jeep">Jeep</option>
+               <option value="Kia">Kia</option>
+               <option value="Lincoln">Lincoln</option>
+               <option value="Toyota">Toyota</option>
+             </select>
+           </div>
          </div>
          <div id="car-condition">
-          <div id="condition-description">
-            What conditon was your car dought in?
-          </div>
-          <div id='conditon-labels'>
-            <input type="radio" name="condition" value="New">New<br>
-            <input type="radio" name="condition" value="Used">Used<br>
-            <input type="radio" name="condition" value="Pre-Owned">Pre-Owned
+          <div class='left-panel'>
+            <label id='car-conditon-labels' for='condition-dropdown'>What conditon was your car bought in?</div>
+          <div class='right-panel'>
+            <div id='conditon-labels'>
+                <input type="radio" name="condition" value="New">New<br>
+                <input type="radio" name="condition" value="Used">Used<br>
+                <input type="radio" name="condition" value="Pre-Owned">Pre-Owned
+            </div>
           </div>
          </div>
          <div id='car-year-dropdown'>
-           <select id='year-dropdown'name="cars">
-             <option value="2019">2019</option>
-             <option value="2018">2018</option>
-             <option value="2017">2017</option>
-             <option value="2016">2016</option>
-             <option value="2015">2015</option>
-             <option value="2014">2014</option>
-             <option value="2013">2013</option>
-             <option value="2012">2012</option>
-           </select>
-         </div>
-         <div class='left-panel'>
-           <div class='Work-done-sections'>
-             Has there been any work done on you car for any of the follow reasons:
+           <div class='left-panel'>
+             <label id='car-year-dropdown' for="year-dropdown">What Year was your car made?</label>
            </div>
            <div class='right-panel'>
-            <input type="checkbox" name="work1" value="Bike">Car accident<br>
-            <input type="checkbox" name="work2" value="Car">Broken window<br>
-            <input type="checkbox" name="work3" value="Boat">Attempted robbery<br>
-            <input type="checkbox" name="work4" value="Boat">No work done<br>
-            <input type="checkbox" name="work5" value="Boat">Other<br>
+             <select id='year-dropdown' name="cars">
+               <option value="2019">2019</option>
+               <option value="2018">2018</option>
+               <option value="2017">2017</option>
+               <option value="2016">2016</option>
+               <option value="2015">2015</option>
+               <option value="2014">2014</option>
+               <option value="2013">2013</option>
+               <option value="2012">2012</option>
+               <option value="2011">2011</option>
+               <option value="2010">2010</option>
+               <option value="2009">2009</option>
+               <option value="2008">2008</option>
+             </select>
            </div>
          </div>
-         <div class='left-panel'>
-           <div class='comment-labels'>
-             <label for='comments'>Enter any additional comments about your cars conditon</label>
+         <div id='Work-done-sections'>
+           <div class='left-panel'>
+             <label id='work-down-checkboxes' for="work-down-checkboxes">Has there been any work done on you car for any of the follow reasons:</label>
            </div>
-           <div class='comment-section'>
-            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+           <div class='right-panel'>
+            <input type="checkbox" name="work1" value="Car accident">Car accident<br>
+            <input type="checkbox" name="work2" value="Broken window">Broken window<br>
+            <input type="checkbox" name="work3" value="Attempted robbery">Attempted robbery<br>
+            <input type="checkbox" name="work4" value="General Maintenance">General Maintenance<br>
+            <input type="checkbox" name="work5" value="No work done">No work done<br>
+            <input type="checkbox" name="work6" value="Other">Other<br>
            </div>
          </div>
-         <div >
-          <input id='submit' type="submit" value="Submit">
+         <div id='Additional_comments_section'>
+           <div class='left=panels'>
+             <label id='Additional_comments' for='comments'>Enter any additional comments about your car (features, additions, etc..)</label>
+           </div>
+           <div class='right-panels'>
+            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your additional comments go here..."></textarea>
+           </div>
          </div>
+          <div class='submit'>
+            <input  id='submit' type="submit" value="Submit">
+          </div>
        </fieldset>
       </form>
     </div>
-    <footer></footer>
+    <footer>
+      &copy; Create by Daniel shelnut
+    </footer>
   </main>
 </body>
 </html>
