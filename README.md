@@ -2,7 +2,7 @@
 This project is a simple survey form created for the **Responsive Web Design Certificate** on [FreeCodeCamp](https://learn.freecodecamp.org/). This particular Survey Form asks the user what type of car they would like to buy.
 
 ## Live demo
-[//]: # (live demo goes here)
+[Live Demo](http://acid-coal.surge.sh/)
 ## Skills
 - HTML5
 - CSS3
