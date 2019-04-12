@@ -16,37 +16,40 @@
 <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
 </head>
 <body>
-  <main>
+  <main id='main'>
     <div class='container-fluid'>
-      <div id="title"><h1>Survey Form</h1></div>
-      <div id="description"><p>Let us know about the car you bought</p></div>
+      <div>
+<h1 id='title'>Survey Form</h1>
+</div>
+      <div ><p id="description">Let us know about the car you want to buy</p></div>
     </div>
     <div class='container'>
 
-      <form id='Survey-Form'>
+      <form id='survey-form'>
         <fieldset>
-          <div id='name'>
+          <div>
             <div class='left-panel'>
                <label id='name-label' for='name'>Name:</label>
             </div>
             <div class='right-panel'>
-             <input type='text' value="Name" class="input-field" required >
+             <input id='name' type='text'  placeholder='Enter you name' class="input-field" required >
            </div>
          </div>
-         <div id='email'>
+         <div >
            <div class='left-panel'>
              <label id='email-label' for ='email'>Email:</label>
            </div>
            <div class='right-panel'>
-             <input type='email' minlength='3' pattern=".+@gmail.com" value="youremail@gmail.com" class="input-field" required >
+             <input id='email' type='email' minlength='3' pattern=".+@gmail.com"
+                 placeholder=" enter youremail@gmail.com" class="input-field" required >
            </div>
          </div>
-         <div id='number'>
+         <div >
            <div class='left-panel'>
-             <label id='age-label' for="age">Age:</label>
+             <label id='number-label' for="age">Age:</label>
           </div>
            <div class='right-panel'>
-             <input type='number' name='age' min ='16' max='120' placeholder="16" class="input-field" required >
+             <input id='number' type='number' name='age'   placeholder='Enter you age' min ='16' max='120' required>
            </div>
          </div>
          <div id='dropdown'>
@@ -71,7 +74,7 @@
          </div>
          <div id="car-condition">
           <div class='left-panel'>
-            <label id='car-conditon-labels' for='condition-dropdown'>What conditon was your car bought in?</div>
+            <label id='car-conditon-labels' for='condition-dropdown'>What conditon do you want your car in bought in?</div>
           <div class='right-panel'>
             <div id='conditon-labels'>
                 <input type="radio" name="condition" value="New">New<br>
@@ -82,7 +85,7 @@
          </div>
          <div id='car-year-dropdown'>
            <div class='left-panel'>
-             <label id='car-year-dropdown' for="year-dropdown">What Year was your car made?</label>
+             <label id='car-year-dropdown' for="year-dropdown">What year of car do you want?</label>
            </div>
            <div class='right-panel'>
              <select id='year-dropdown' name="cars">
@@ -103,7 +106,7 @@
          </div>
          <div id='Work-done-sections'>
            <div class='left-panel'>
-             <label id='work-down-checkboxes' for="work-down-checkboxes">Has there been any work done on you car for any of the follow reasons:</label>
+             <label id='work-down-checkboxes' for="work-down-checkboxes">What type of damage done on your car are you okay with:</label>
            </div>
            <div class='right-panel'>
             <input type="checkbox" name="work1" value="Car accident">Car accident<br>
